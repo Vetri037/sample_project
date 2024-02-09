@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Event Handling</title>
+		
+	
+	</head>
+	<body>
+		<div>
+			<h1 id="head">STUDENT FORM</h1>
+		</div><br>
+		<div>
+			<label>First Name</label>
+			<input type="text" id="fname" onfocus="this.style.backgroundColor = 'yellow' " onblur="this.style.backgroundColor = 'white' ">
+		</div><br>
+		<div>
+			<label>Last Name</label>
+			<input type="text" id="lname">
+		</div><br>
+		<div>
+			<label>Age</label>
+			<input type="text" id="age">
+		</div><br>
+		<div>
+			<button id="btn">CLICK!!!</button>
+		</div>
+		
+		<p id="para">This is 
+			<span id="span" name="changeBackgroundColor">Java Class</span>
+		</p>
+		<button onclick="handleAttribute()">ATTRIBUTE</button>
+		<p id="para1">Welcome to js class</p>
+		<button onclick="handleStyle()">Apply Style</button>
+		</div><br>
+		
+		<script>
+		
+		let lname = document.getElementById('lname');
+			lname.onfocus = function(){
+				lname.style.backgroundColor = "yellow";
+			}
+			lname.onblur = function(){
+				lname.style.backgroundColor = "white";
+			}
+			let heading = document.getElementById('head');
+			heading.onmouseover = function(){
+				heading.style.color = 'orange';
+			}
+			heading.onmouseout = function(){
+				heading.style.color = 'black';
+			}
+			//manipulatingAttributes and styles
+				function handleAttribute(){
+				let span = document.getElementById('span');//null
+				if(span != null && span.hasAttribute('name')){//span.getAttribute('name') == "changeBackgroundColor"
+					span.setAttribute('style',"color:blue");
+					span.setAttribute('id',"span1");
+					span.setAttribute('name',"changeColor");
+				}
+			}
+			function handleStyle(){
+				let para = document.getElementById('para1');
+				<!-- para.style.backgroundColor = "blue"; -->
+				<!-- para.style.color = "white"; -->
+				
+				para.style.cssText = "background-color:red;color:white";
+			}
+		</script>
+		
+	</body>
+</html>
+
+		
+

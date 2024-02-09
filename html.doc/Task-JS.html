@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<script>
+			function getData(){
+				let num1=parseInt(document.getElementById('ad0').value);
+				let num2=parseInt(document.getElementById('ad1').value);
+				let sum=num1+num2;
+				document.getElementById('res').value=sum;
+			}
+		</script>
+	</head>
+	<body>
+		<fieldset>
+			<div>
+			<h1>Calculation</h1>
+			</div>
+			<br>
+			<div>
+			<label> NUM-1 : </label>
+			<input id="ad0"  value="1"type="number" placeholder="Enter number1">
+			<label> NUM2 : </label>
+			<input id="ad1" value="3" type="number" placeholder="Enter nummber2">
+			</div>
+			<br>
+			<div>
+		    <label>Result : </label>
+			<input id="res" type="input" disabled readonly>
+			<div><br>
+			<button onclick="getData()">ADD</button>
+			<button>SUB</button>
+			<button>MUL</button>
+			<button>DIV</button>
+		</fieldset>
+		
+	</body>
+</html>

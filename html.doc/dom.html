@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+	<head>
+		<title>D O M - LEARNING</title>
+		<script>
+			function getTagData(){
+				let para=document.getElementsByTagName('p');
+				for( let para1 of para){
+					console.log(para1);
+				}
+			}
+			function getClassName(){
+				let oddList=document.getElementsByClassName('odd');
+				for( let oddList1 of oddList){
+				console.log(oddList1);
+				}
+			}
+			function getQueryData(){
+				let queryData = document.querySelector('h1');
+				console.log(queryData);
+				
+				let queryAllData = document.querySelectorAll('fieldset');
+				console.log(queryAllData);
+			}
+			function diffText(){
+				let diff=document.getElementById('para6');
+				console.log(diff);
+				
+				let textContent=diff.textContent;
+				console.log(textContent);
+				
+				let innerText=diff.innerText;
+				console.log(innerText);
+				
+				let innerHtml=diff.innerHTML;
+				console.log(innerHtml);
+			}
+			function createHtmlElement(){
+				let div=document.createElement('fieldset');  //here we create elements like fieldset,div,tec...
+				let name=document.getElementById('name').value;
+				div.id="test"+new Date().getUTCMilliseconds(); //we create id with different values using >>>getUTCMilliseconds()
+				<!-- div.innerText="welcome"; -->
+				<!-- console.log(div); -->
+				text=document.createTextNode(name+" "+"welcome"); //create textNode to add with string(welcome) using +
+				div.appendChild(text);  //
+				console.log(div);
+				document.body.appendChild(div); // body>>display in webpage  
+			}
+			function handleAttribute(){
+				let span=document.getElementById('span');
+				if (span != null &&span.hasAttribute('name')){	
+				//span.getAttribute('name')=="changebgcolor"
+				
+				span.setAttribute('style',"color:blue");
+				span.setAttribute('id',"span1");
+				span.setAttribute('name',"changeColor");
+				}
+			}
+			function handleStyle(){
+				 let style=document.getElementById('par1');
+				 par1.style.cssText="background-Color:red;color:white";
+				 par1.style.backgroundColor="blue";
+				 para.style.color="white";
+				}
+			
+		</script>
+		
+		<style>
+			button{
+				color:orange;
+				opacity:1;
+			}
+			button:hover{
+				opacity:0.5;
+				color:green;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Dom methods and manipulating elements</h1>
+		<fieldset>
+			<p> 1 this is my para</p>
+			<p> 2 this is my para</p>
+			<p> 3 this is my para</p>
+			<p> 4 this is my para</p>
+			<p> 5 this is my para</p>
+			<input type="button" id="btn" value="Get Tag Data" onclick="getTagData()">
+		</fieldset>
+		<br>
+		<fieldset> 
+			<p id="para1" class="odd"> 1 this is my para</p>
+			<p id="para2" class="even"> 2 this is my para</p>
+			<p id="para3" class="odd"> 3 this is my para</p>
+			<p id="para4" class="even"> 4 this is my para</p>
+			<p id="para5" class="odd"> 5 this is my para</p>
+			<input type="button" id="btn" value="Get Class Data" onclick="getClassName()">
+		</fieldset>
+		<br>
+		<fieldset> 
+			<p id="para1" class="odd"> 1 this is my para</p>
+			<p id="para2" class="even"> 2 this is my para</p>
+			<p id="para3" class="odd"> 3 this is my para</p>
+			<p id="para4" class="even"> 4 this is my para</p>
+			<p id="para5" class="odd"> 5 this is my para</p>
+			<input type="button" id="btn" value="Get Query Data" onclick="getQueryData()">
+		</fieldset>
+		<br>
+		<fieldset>
+			<!-- <p id="para6">welcome to  -->
+				<!-- <span id="span">javascript class</span></p> -->
+			<!-- <button onclick="diffText()">DIFFERENCE</button> -->
+		</fieldset>
+		<br>
+		<fieldset>
+			<input type="text" id="name">
+			<button onclick="createHtmlElement()">CREATE DIV ELEMENT</button>
+		</fieldset>
+		<br>
+		<p id="para"> this is handling attribute in <span id="span" name="changeBackGroundColor">javascript</span></p>
+		<button onclick="handleAttribute()">ATTRIBUTE</button>
+		<br>
+		<p id="par1" > welcome to js this is handleStyle</p>
+		<button onclick="handleStyle">Apply Style</button>
+	</body>
+</html>

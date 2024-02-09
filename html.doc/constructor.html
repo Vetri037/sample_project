@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Constructor Method</title>
+		<script>
+			/*let name=new String('Vetri');
+			console.log(name);*/
+			
+			
+			//this ..object reference keyword[object name]
+			/*function Student(){      // creating the pattern>>    //constructor name with function
+				this.name="vetri";
+			}
+			let std=new Student();
+			console.log(std);
+			console.log(std.name);*/
+			
+			//class name with constructor method
+			//single constructor class>>multiple methods are created..			
+			
+			/*function Student(name,age){
+				this.name=name;
+				this.age=age;
+			}
+			let stdv=new Student("vetri",22);
+			console.log(stdv);*/
+			
+			//with class  >>without paranthesis ()
+			
+			/*class Calculation{
+				constructor(num1,num2){
+					this.num1=num1;
+					this.num2=num2;
+				}
+				add(){ //add() function or do any  it just function name we use sub() mul() div()
+					return this.num1+this.num2;//here add two nums
+				}				
+			}
+			let addition=new Calculation(10,10);
+			console.log(addition);
+			console.log(addition.add());*/
+			
+			//constructor get and set
+			
+			/* class Student{
+				get getName(){   
+					return this.name;
+				}
+				set setName(name){
+					this.name=name;
+				}
+			 }
+			 let std=new Student();
+			 console.log(std);//Student{}
+			 std.name="vetri";
+			 console.log(std);//Student{name:'vetri'}
+			 console.log(std.getName);//vetri
+			 console.log(std.setName);//undefined  */
+			
+			
+			//callback
+			//setTimeout(function,time);
+			
+			/*function demoCallBack(){
+				setTimeout(()=>{
+					console.log("Display the msg after 3 seconds");
+				},3000)
+			}
+			demoCallBack();  */
+			
+			/*function demoCallback(callback){
+				setTimeout(()=>{
+					console.log("display msg after 3 seconds");
+					callback();
+				},3000);
+			}
+			function demoCallback1(callback){
+				setTimeout(()=>{
+					console.log("display the msg after 3 ses");
+					callback();
+				},3000);
+			}
+			//callback hell
+			demoCallback(()=>{
+				console.log("callback works");
+			demoCallback1(()=>{
+					console.log("callback 1 works");
+				})
+			})*/
+			
+		//promise
+/*
+    resolve() => .then()
+    reject() => .catch()
+*/
+
+let promise = new Promise((resolve,reject) => {
+    setTimeout(() => {
+        resolve(1);
+    },1000);
+    
+    setTimeout(() => {
+        reject(new Error("Throws an error"));
+    },2000);
+});
+
+console.log(promise);
+promise.finally(() => {
+    console.log("Promise Begins");
+}).then((r) => {
+    console.log(promise);
+    console.log(r);
+    return r * 2;
+}).then((r) => {
+    console.log(promise);
+    console.log(r);
+    return r * 2;
+}).then((r) => {
+    console.log(promise);
+    console.log(r);
+}).catch(() => {
+    console.log(promise);
+}).finally(() => {
+    console.log("THE END");
+});
+			
+		</script>
+	</head>
+	<body>
+		<h3>constructor method</h3>
+		<p>constructor :
+		function constructorName(){
+			stmt
+		}
+		</P
+		<h3>constructor with class</h>
+		<h4>get and set</h4>
+		
+		
+	</body>
+</html>
