@@ -1,0 +1,103 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+	
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.about-me,
+.skills,
+.projects {
+    padding: 40px 0;
+	
+}
+
+.projects .project {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color:#333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+.project{
+	padding-left:30px;
+	
+}
+body{
+	/*background-image:url('D:\Project\media/image5.jpg');*/
+	/*background-repeat:no-repeat;*/
+	
+}
+
+.navbar{
+	display:flex;
+	justify-content:end;
+	text-align;center;
+	position: fixed;
+	width:100%;
+	top:150px;
+	
+}
+#navList {
+	list-style-type: none;
+	padding:0;
+	margin:0;
+	display:none;
+}
+#navbar li{
+		display:inline;
+		margin-right:15px;
+}
+#navList a{
+	text-decoration:none;
+	color:white;
+	font-size:18px;
+	padding:14px 16px;
+	display:inline-block;
+	text-shadow:1px 1px black;	
+}
+#navList a:hover{
+	color:blue;
+}
+
+#toggleBtn{
+	background-color:#555;
+	color:white;
+	border:none;
+	padding: 10px 20px;
+	cursor:pointer;
+}
+button{
+	width:20px;
+	height:20px;
+	background-color:gray;
+	border-radius:30px;
+	padding-right:60px;
+	color:white;
+}
+
+/* Add more styling as needed */
